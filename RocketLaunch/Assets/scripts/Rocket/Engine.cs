@@ -1,14 +1,20 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Engine", menuName = "RocketLaunch/Engine", order = 0)]
-public class Engine : ScriptableObject
+public class Engine : MonoBehaviour 
 {
+    [SerializeField]private Transform EnginePosition;
+    private EngineData CurrentEngineData;
 
-    public GameObject EnginePrefab;
-    public float Price;
-    public Color BackGroundColor;
-    public void InitEngine(){
-        Events.InitEngine?.Invoke(EnginePrefab);
-        Events.UpdatePrice?.Invoke(Price);
+
+    void Start(){
+        Events.renderEngine += _renderEngine;
     }
+    private void _renderEngine(GameObject prefab){
+        foreach(Transform child in EnginePosition){
+            Destroy(child.gameObject);
+        }
+        Instantiate(prefab, EnginePosition);
+    }
+
+
 }

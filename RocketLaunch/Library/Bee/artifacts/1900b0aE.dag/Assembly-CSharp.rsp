@@ -354,16 +354,17 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/scripts/DATA/DeflectorData.cs"
+"Assets/scripts/DATA/EngineData.cs"
+"Assets/scripts/DATA/PlumageData.cs"
+"Assets/scripts/DATA/TankData.cs"
+"Assets/scripts/Interfaces/IRocketPart.cs"
 "Assets/scripts/Rocket/Deflector.cs"
 "Assets/scripts/Rocket/Engine.cs"
 "Assets/scripts/Rocket/Events.cs"
 "Assets/scripts/Rocket/Plumage.cs"
 "Assets/scripts/Rocket/Rocket.cs"
 "Assets/scripts/Rocket/Tank.cs"
-"Assets/scripts/UI/Cell.cs"
-"Assets/scripts/UI/Launch.cs"
-"Assets/scripts/UI/Money.cs"
-"Assets/scripts/UI/Store.cs"
 -langversion:9.0
 
 /deterministic

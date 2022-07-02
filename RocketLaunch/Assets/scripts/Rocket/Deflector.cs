@@ -1,8 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
+public class Deflector : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-[CreateAssetMenu(fileName = "Deflector", menuName = "RocketLaunch/Deflector", order = 0)]
-public class Deflector : ScriptableObject 
-{   
-    
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
