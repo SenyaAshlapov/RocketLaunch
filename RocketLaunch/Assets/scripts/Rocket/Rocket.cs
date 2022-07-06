@@ -1,52 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public static Rocket InstanceRocket{ get; private set;}
-    [Header("Start parts")]
-    public EngineData StartEngineData;
-
-    private float _rocketThrust;
-    private float _rocketPulse;
-    private float _rocketResistance;
-    private float _rocketControl;
-
-    [SerializeField]private float _rocketWeight;
-    [SerializeField]private float _rocketTotalPrice;
-
-    private DeflectorData _currentDeflector;
-    private TankData _currentTank;
-    private PlumageData _currentPlumage;
-    private EngineData _currentEngine;
-
-
-    private void Awake(){
-        if(InstanceRocket != null && InstanceRocket != this){
-            Destroy(this);
-        }
-        else{
-            InstanceRocket = this;
-        }
-    }
+    [SerializeField]private float _rocketThrust;
+    [SerializeField]private float _rocketControl;
+    [SerializeField]private float _rocketSpecificImpulse;
+    [SerializeField]private float _rocketResistance;
 
     void Start(){
-        _selectEngine(StartEngineData);
+        Events.UpdateThrust += updateThrust;
+        Events.UpdateControl += updateControl;
+        Events.UpdateSpecificImpulse += updateSpecificImpulse;
+        Events.UpdateResistance += updateResistance;
+        
+        Events.LaunchRocket += rocketlaunch;
     }
 
-    private void _selectEngine(EngineData newEngine){
-        if(_currentEngine != null)
-        {
-            _rocketWeight -= _currentEngine.Weight;
-            _rocketTotalPrice -= _currentEngine.Price;
-        }
+    void rocketlaunch(){
 
-        _currentEngine = newEngine;
-
-        _rocketWeight += _currentEngine.Weight;
-        _rocketTotalPrice += _currentEngine.Price;   
-
-        Events.renderEngine?.Invoke(_currentEngine.Prefab);  
     }
+
+    private void updateThrust(float newThrust) => _rocketThrust = newThrust;
+
+    private void updateControl(float newControl) => _rocketControl = newControl;
+
+    private void updateSpecificImpulse(float newSpecificImpulse) => _rocketSpecificImpulse = newSpecificImpulse;
+
+    private void updateResistance(float newResistance) => _rocketResistance = newResistance;
 }

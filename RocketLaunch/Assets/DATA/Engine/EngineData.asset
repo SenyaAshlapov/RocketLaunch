@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21d6184f8cab8144a00d35335bff75d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c8a5c25a98e8d6429a67fb771583e7c, type: 3}
   m_Name: EngineData
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 6846327074483064100, guid: ab0152131c883c147a2f3fc86b189ae8, type: 3}
+  Weight: 0
+  Price: 10
+  Icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   Name: 
-  Prefab: {fileID: 919132149155446097, guid: 308534521b8857a4eb31eb5a358b4937, type: 3}
-  Price: 14
-  Weight: 17
-  Icon: {fileID: 0}
   BackGroundColor:
     serializedVersion: 2
     rgba: 0
-  EngineThrust: 0
+  isPayed: 0
+  Thrust: 3
