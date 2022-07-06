@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultrEngine
   m_EditorClassIdentifier: 
   Prefab: {fileID: 919132149155446097, guid: 308534521b8857a4eb31eb5a358b4937, type: 3}
-  Weight: 0
+  Weight: 4
   Price: 0
   Icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   Name: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TankData 1
   m_EditorClassIdentifier: 
   Prefab: {fileID: 852988954474733710, guid: 7278274db86460b4c8ec3448a8b1bd25, type: 3}
-  Weight: 0
+  Weight: 5
   Price: 15
   Icon: {fileID: 0}
   Name: 

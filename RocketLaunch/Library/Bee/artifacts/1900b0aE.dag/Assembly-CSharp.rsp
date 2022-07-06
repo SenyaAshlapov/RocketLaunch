@@ -354,6 +354,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/Bezier.cs"
 "Assets/Scripts/Events.cs"
 "Assets/Scripts/Level/Level.cs"
 "Assets/Scripts/Level/LevelData.cs"
@@ -369,6 +370,9 @@
 "Assets/Scripts/Rocket/RocketParts/RocketPart.cs"
 "Assets/Scripts/Rocket/RocketParts/Tank.cs"
 "Assets/Scripts/UI/Cell.cs"
+"Assets/Scripts/UI/CloseButton.cs"
+"Assets/Scripts/UI/Launch.cs"
+"Assets/Scripts/UI/Monye.cs"
 "Assets/Scripts/UI/Store.cs"
 -langversion:9.0
 

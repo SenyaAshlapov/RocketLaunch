@@ -27,6 +27,8 @@ public class Events : MonoBehaviour
     public static FloatDelegate UpdateControl;
     public static FloatDelegate UpdateSpecificImpulse;
     public static FloatDelegate UpdateResistance;
+    public static FloatDelegate UpdateWeight;
+  
 
     public static FloatDelegate UpdateBudgetUI;
 

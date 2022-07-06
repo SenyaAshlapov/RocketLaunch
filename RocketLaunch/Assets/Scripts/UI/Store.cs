@@ -14,6 +14,8 @@ public class Store : MonoBehaviour
 
     [SerializeField]private Transform _storeView;
     [SerializeField]private GameObject _store;
+    [SerializeField]private GameObject _launch;
+    [SerializeField]private GameObject _storeBar;
     [SerializeField]private Cell _cell;
 
     void Start(){
@@ -21,11 +23,14 @@ public class Store : MonoBehaviour
         Events.SelectDeflectorStore += initDeflectorStore;
         Events.SelectTankStore += initTankStore;
         Events.SelectPlumageStore += initPlumageStore;
+        Events.HideStore += hideStores;
+        Events.LaunchRocket += hideAllStoreUI;
     }
 
-   public void initEngineStore()
+   private void initEngineStore()
    {
         _store.SetActive(true);
+        _launch.SetActive(false);
 
         foreach(Transform child in _storeView){
             Destroy(child.gameObject);
@@ -38,9 +43,10 @@ public class Store : MonoBehaviour
         }
     }
 
-    public void initDeflectorStore()
+    private void initDeflectorStore()
     {
         _store.SetActive(true);
+        _launch.SetActive(false);
 
         foreach(Transform child in _storeView){
             Destroy(child.gameObject);
@@ -53,9 +59,10 @@ public class Store : MonoBehaviour
         }
     }
 
-    public void initTankStore()
+    private void initTankStore()
     {
         _store.SetActive(true);
+        _launch.SetActive(false);
 
         foreach(Transform child in _storeView){
             Destroy(child.gameObject);
@@ -68,9 +75,10 @@ public class Store : MonoBehaviour
         }
     }
 
-    public void initPlumageStore()
+    private void initPlumageStore()
     {
         _store.SetActive(true);
+        _launch.SetActive(false);
 
         foreach(Transform child in _storeView){
             Destroy(child.gameObject);
@@ -83,5 +91,15 @@ public class Store : MonoBehaviour
         }
     }
 
+    private void hideStores(){
+        _store.SetActive(false);
+        _launch.SetActive(true);
+    }
+
+    private void hideAllStoreUI(){
+        _launch.SetActive(false);
+        _store.SetActive(false);
+        _storeBar.SetActive(false);
+    }
 
 }

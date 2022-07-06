@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlumageData
   m_EditorClassIdentifier: 
   Prefab: {fileID: 6151714698075174897, guid: 6d70796d42de99148951bfea5025bf72, type: 3}
-  Weight: 0
+  Weight: 6
   Price: 15
   Icon: {fileID: 0}
   Name: 

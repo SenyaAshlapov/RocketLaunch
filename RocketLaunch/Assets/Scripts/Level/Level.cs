@@ -12,7 +12,7 @@ public class Level : MonoBehaviour
     public static float LevelGravity;
     public static float LevelAtmosphereResistance;
     public static float LevelRequiredHeight;
-    void Start()
+    void Awake()
     {
         LevelBudget = _levelData.Budget;
         LevelGravity = _levelData.Gravity;

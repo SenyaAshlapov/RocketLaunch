@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DeflectorData 1
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4420828186119951179, guid: 7d8b2e0efc80bff40926d6f488b4f0fd, type: 3}
-  Weight: 0
+  Weight: 5
   Price: 30
   Icon: {fileID: 0}
   Name: 

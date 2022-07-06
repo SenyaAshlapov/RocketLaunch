@@ -13,10 +13,13 @@ public class EngineData : RocketPartData
         float _budget = Level.LevelBudget + Engine._currentEngine.Price;
         if(_budget > Price){
                 Level.LevelBudget = Level.LevelBudget + Engine._currentEngine.Price - Price;
+                Rocket.RocketWeigt = Rocket.RocketWeigt - Engine._currentEngine.Weight + Weight;
 
                 Events.UpdateEngineEvent?.Invoke(this);
                 Events.UpdateBudgetUI?.Invoke(Level.LevelBudget);
+                Events.HideStore?.Invoke();
                 
+                Debug.Log("weight: " + Rocket.RocketWeigt);
                 Debug.Log(Level.LevelBudget);
         }
             
