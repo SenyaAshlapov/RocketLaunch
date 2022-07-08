@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
@@ -25,6 +26,8 @@ public class Rocket : MonoBehaviour
     [SerializeField]private float _curveT = 0;
     [Range(0,0.0005f)]
     [SerializeField]private float _speedT;
+    [SerializeField]private AnimationCurve _speedAcceleration;
+    private float _launchTime = 0f;
 
 
     void Start(){
@@ -36,10 +39,11 @@ public class Rocket : MonoBehaviour
         currentState += rocketPreparation;
 
         Events.LaunchRocket += rocketStartLaunching;
+        Events.DestroyRocket += rockeDestroy;
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
         currentState?.Invoke();
     }
@@ -69,27 +73,43 @@ public class Rocket : MonoBehaviour
     }
 
      private void rocketLaunching(){
+        
         calculateSpeed();
         if(_curveT < 1){
-            _curveT += _speedT;
+            _launchTime += Time.deltaTime;
+            _curveT = _curveT + (_speedT * _speedAcceleration.Evaluate(_launchTime));
         }
         _rocket.transform.position = Bezier.GetCurveTrajectory(_curvePoint0.position, _curvePoint1.position, _curvePoint2.position, _curvePoint3.position, _curveT);
         _rocket.transform.rotation = Quaternion.LookRotation(Bezier.GetCurveDeirection(_curvePoint0.position, _curvePoint1.position, _curvePoint2.position, _curvePoint3.position, _curveT));        
     }
 
     private void rocketPreparation(){
-        //че-то там
+        //some preparation logic
+    }
+
+    private void rockeDestroy(){
+        currentState -= rocketLaunching;
+        currentState += Destroying;
     }
 
     private void rocketStartLaunching(){
-         currentState -= rocketPreparation;
-          currentState += rocketLaunching;
+        currentState -= rocketPreparation;
+        currentState += rocketLaunching;
     }
 
     private void calculateSpeed(){
-        _speedT = (_rocketThrust * _rocketSpecificImpulse)/(_rocketResistance * RocketWeigt *  10000); 
+        _speedT = (_rocketThrust * _rocketSpecificImpulse)/(_rocketResistance * RocketWeigt *  1000) ; 
     }
 
+    private void Destroying(){
+
+    }
+
+    private void OnTriggerEnter(Collider other){
+        if(other.tag  == "Finish"){
+            Events.LevelComplete?.Invoke();
+        }
+    }
 
 } 
 

@@ -41,4 +41,6 @@ public class Events : MonoBehaviour
     public static SimpleDelegate HideStore;
 
     public static SimpleDelegate LaunchRocket;
+    public static SimpleDelegate DestroyRocket;
+    public static SimpleDelegate LevelComplete;
 }
