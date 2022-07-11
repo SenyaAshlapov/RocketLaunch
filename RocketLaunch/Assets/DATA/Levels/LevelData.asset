@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489562d7d5a750043ab6f808d30e8a73, type: 3}
   m_Name: LevelData
   m_EditorClassIdentifier: 
+  LevelID: 1
   Budget: 100
   Gravity: 0
   AtmosphereResistance: 0
