@@ -15,10 +15,11 @@ MonoBehaviour:
   Prefab: {fileID: 214419023443524754, guid: 1fe4c63f8f4aa6943bfe7e3c08f9b36c, type: 3}
   Weight: 5
   Price: 25
-  Icon: {fileID: 0}
-  Name: 
+  Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  ParametrIcon: {fileID: 21300000, guid: af9759fa32dbda54a8532c4d17862896, type: 3}
+  Name: Persei
   BackGroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294950261
   isPayed: 0
   Contorol: 2.5

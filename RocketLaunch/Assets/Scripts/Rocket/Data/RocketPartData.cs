@@ -8,8 +8,10 @@ public class RocketPartData : ScriptableObject {
     [Space(15)]
     [Header("UI Setting")]
     public Sprite Icon;
+    public Sprite ParametrIcon;
     public string Name;
     public Color32 BackGroundColor;
+    
 
     public bool isPayed;
 

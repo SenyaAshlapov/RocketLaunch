@@ -16,9 +16,10 @@ MonoBehaviour:
   Weight: 4
   Price: 10
   Icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  Name: 
+  ParametrIcon: {fileID: 21300000, guid: 4a014ca7a7aabac44a371bbeaefa3e7d, type: 3}
+  Name: E-300
   BackGroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294931902
   isPayed: 0
   Thrust: 2

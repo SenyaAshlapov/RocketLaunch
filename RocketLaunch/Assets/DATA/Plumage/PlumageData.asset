@@ -15,10 +15,11 @@ MonoBehaviour:
   Prefab: {fileID: 6151714698075174897, guid: 6d70796d42de99148951bfea5025bf72, type: 3}
   Weight: 6
   Price: 15
-  Icon: {fileID: 0}
-  Name: 
+  Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  ParametrIcon: {fileID: 21300000, guid: af9759fa32dbda54a8532c4d17862896, type: 3}
+  Name: Escalibur
   BackGroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294931891
   isPayed: 0
   Contorol: 3.5

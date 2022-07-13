@@ -15,10 +15,11 @@ MonoBehaviour:
   Prefab: {fileID: 852988954474733710, guid: 7278274db86460b4c8ec3448a8b1bd25, type: 3}
   Weight: 5
   Price: 15
-  Icon: {fileID: 0}
-  Name: 
+  Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  ParametrIcon: {fileID: 21300000, guid: 7f77255a32a4bd9488bc923a8135e64b, type: 3}
+  Name: AST
   BackGroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294950261
   isPayed: 0
   SpecificImpulse: 2

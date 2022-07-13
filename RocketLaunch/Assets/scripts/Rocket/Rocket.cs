@@ -26,6 +26,7 @@ public class Rocket : MonoBehaviour
     [SerializeField]private float _curveT = 0;
     [Range(0,0.0005f)]
     [SerializeField]private float _speedT;
+    [SerializeField]private float _speedCoefficient;
     [SerializeField]private AnimationCurve _speedAcceleration;
     private float _launchTime = 0f;
 
@@ -98,7 +99,8 @@ public class Rocket : MonoBehaviour
     }
 
     private void calculateSpeed(){
-        _speedT = (_rocketThrust * _rocketSpecificImpulse)/(_rocketResistance * RocketWeigt *  1000) ; 
+       
+       _speedT = ((_rocketThrust * _rocketSpecificImpulse) - (Level.LevelAtmosphereResistance * Level.LevelGravity))/(_rocketResistance * RocketWeigt *  _speedCoefficient);
     }
 
     private void Destroying(){

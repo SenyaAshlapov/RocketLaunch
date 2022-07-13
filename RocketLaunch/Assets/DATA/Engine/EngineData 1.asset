@@ -16,9 +16,10 @@ MonoBehaviour:
   Weight: 5
   Price: 50
   Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  Name: 
+  ParametrIcon: {fileID: 21300000, guid: 4a014ca7a7aabac44a371bbeaefa3e7d, type: 3}
+  Name: FX-100
   BackGroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294950261
   isPayed: 0
   Thrust: 3

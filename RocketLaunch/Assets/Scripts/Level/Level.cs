@@ -10,7 +10,7 @@ public class Level : MonoBehaviour
     public static float LevelBudget;
     public static float LevelGravity;
     public static float LevelAtmosphereResistance;
-    public static float LevelRequiredHeight;
+    //public static float LevelRequiredHeight;
     void Start(){
         Events.LevelComplete += completeLevel;
     }
@@ -20,7 +20,7 @@ public class Level : MonoBehaviour
         LevelBudget = _levelData.Budget;
         LevelGravity = _levelData.Gravity;
         LevelAtmosphereResistance = _levelData.AtmosphereResistance;
-        LevelRequiredHeight = _levelData.RequiredHeight;
+        //LevelRequiredHeight = _levelData.RequiredHeight;
     }
 
     public Level(int id)

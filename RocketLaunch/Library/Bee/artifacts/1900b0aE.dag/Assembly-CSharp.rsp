@@ -370,13 +370,16 @@
 "Assets/Scripts/Rocket/RocketParts/Plumage.cs"
 "Assets/Scripts/Rocket/RocketParts/RocketPart.cs"
 "Assets/Scripts/Rocket/RocketParts/Tank.cs"
-"Assets/Scripts/UI/Cell.cs"
-"Assets/Scripts/UI/CloseButton.cs"
-"Assets/Scripts/UI/Control.cs"
-"Assets/Scripts/UI/Controller.cs"
-"Assets/Scripts/UI/Launch.cs"
-"Assets/Scripts/UI/Monye.cs"
-"Assets/Scripts/UI/Store.cs"
+"Assets/Scripts/Sky.cs"
+"Assets/Scripts/UI/Level/Cell.cs"
+"Assets/Scripts/UI/Level/CloseButton.cs"
+"Assets/Scripts/UI/Level/Control.cs"
+"Assets/Scripts/UI/Level/Controller.cs"
+"Assets/Scripts/UI/Level/Launch.cs"
+"Assets/Scripts/UI/Level/Monye.cs"
+"Assets/Scripts/UI/Level/Store.cs"
+"Assets/Scripts/UI/Menu/LevelCell.cs"
+"Assets/Scripts/UI/Menu/LevelMenu.cs"
 -langversion:9.0
 
 /deterministic
