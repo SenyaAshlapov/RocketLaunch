@@ -8,7 +8,11 @@ public class EngineData : RocketPartData
     [Space(15)]
     public float Thrust;
 
-    public void TryBuyEngine()
+    void Start(){
+        ParametrValue = Thrust;
+    }
+
+    public override void TryBuyRocketPart()
     {
         float _budget = Level.LevelBudget + Engine._currentEngine.Price;
         if(_budget > Price){

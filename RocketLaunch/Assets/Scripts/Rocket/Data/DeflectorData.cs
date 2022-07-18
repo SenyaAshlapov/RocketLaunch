@@ -6,7 +6,7 @@ public class DeflectorData :RocketPartData
     [Space(15)]
     public float Resistance;
 
-    public void TryBuyDeflector(){
+    public override void TryBuyRocketPart(){
         float _budget = Level.LevelBudget + Deflector._currentDeflector.Price;
         if(_budget > Price){
                 Level.LevelBudget = Level.LevelBudget + Deflector._currentDeflector.Price - Price;

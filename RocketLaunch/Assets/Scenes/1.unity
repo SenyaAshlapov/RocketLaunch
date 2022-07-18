@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44386253, g: 0.4932282, b: 0.57273173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44385818, g: 0.49322343, b: 0.5727273, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2973,9 +2973,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49c936a36dca5f846a984c3861c91327, type: 2}
   _storeView: {fileID: 2096471633}
   _store: {fileID: 1934494660}
-  _launch: {fileID: 1786482093}
+  _launchButton: {fileID: 1786482093}
   _storeBar: {fileID: 1613284978}
-  _cell: {fileID: 6070734061333637219, guid: ddba2bfc9aceb494cbe1351a231f4391, type: 3}
+  _cellPrefab: {fileID: 6070734061333637219, guid: ddba2bfc9aceb494cbe1351a231f4391, type: 3}
 --- !u!1 &1532186446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,7 +4294,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7786459, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

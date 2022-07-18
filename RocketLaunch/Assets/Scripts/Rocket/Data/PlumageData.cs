@@ -6,7 +6,7 @@ public class PlumageData : RocketPartData
     [Space(15)]
     public float Contorol;
 
-    public void TryBuyPlumage(){
+    public override void TryBuyRocketPart(){
         float _budget = Level.LevelBudget + Plumage._currentPlumage.Price;
         if(_budget > Price){
                 Level.LevelBudget = Level.LevelBudget + Plumage._currentPlumage.Price - Price;
