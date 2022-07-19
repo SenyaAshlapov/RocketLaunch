@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 305441113}
   - component: {fileID: 305441114}
   m_Layer: 0
-  m_Name: EnginePoint
+  m_Name: Engine
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305441112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.38, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _partPosition: {fileID: 305441113}
-  _startEngine: {fileID: 11400000, guid: 5d0ede642b3f77848a46859af4fcd413, type: 2}
+  _startEngine: {fileID: 11400000, guid: b8149418da6ecb445b039acdb4363c72, type: 2}
 --- !u!1 &354457184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 710260460}
   - component: {fileID: 710260461}
   m_Layer: 0
-  m_Name: TankPoint
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _partPosition: {fileID: 710260460}
-  _startTank: {fileID: 11400000, guid: 3231490f6cc8c7249baa7e05792d0430, type: 2}
+  _startTank: {fileID: 11400000, guid: 15aff37fba2c4754cb90607fa820c316, type: 2}
 --- !u!1 &812741421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 1004888565}
   - component: {fileID: 1004888566}
   m_Layer: 0
-  m_Name: DeflectorPoint
+  m_Name: Deflector
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2009,7 +2009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004888564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.21, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2744,7 +2744,7 @@ GameObject:
   - component: {fileID: 1333478221}
   - component: {fileID: 1333478222}
   m_Layer: 0
-  m_Name: PlumagePoint
+  m_Name: Plumage
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2758,7 +2758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333478220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2960,17 +2960,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _engineStoreList:
-  - {fileID: 11400000, guid: b8149418da6ecb445b039acdb4363c72, type: 2}
+  - {fileID: 11400000, guid: 5d0ede642b3f77848a46859af4fcd413, type: 2}
+  - {fileID: 11400000, guid: 740759f9b24b60448aca30c876bcc12d, type: 2}
+  - {fileID: 11400000, guid: 9b0ca56dea8728145a0fbd2c6487c3af, type: 2}
+  - {fileID: 11400000, guid: aef233a28f509444a8e980da3b97cc26, type: 2}
+  - {fileID: 11400000, guid: 54a331ee40035804692ac3a49cb9c611, type: 2}
+  - {fileID: 11400000, guid: 9b73045b40f0c9f4c8a9d88994071d04, type: 2}
+  - {fileID: 11400000, guid: 8f06210b39929f94d9882bb4bf3ef8ea, type: 2}
+  - {fileID: 11400000, guid: 427fe717a68e1634b91093841216fc54, type: 2}
+  - {fileID: 11400000, guid: fc6994a89ab50b04890f9ba0cb75db4e, type: 2}
   - {fileID: 11400000, guid: b4a04f3302836634aa0b4657fe6ce0ba, type: 2}
   _plumageStoreList:
-  - {fileID: 11400000, guid: 0f9f957886ee86b44bf47ff017b6ccb3, type: 2}
-  - {fileID: 11400000, guid: d8a443eb2bf73314e87bfaeac4529828, type: 2}
+  - {fileID: 11400000, guid: 41187a3041911b84db5121f21cbd2123, type: 2}
+  - {fileID: 11400000, guid: f222bae9167992f44afbbc6dee69d943, type: 2}
+  - {fileID: 11400000, guid: 3192b2cbf62afe4499531299e74af5b2, type: 2}
+  - {fileID: 11400000, guid: f91f532e45161a947a363c8d7f5ce253, type: 2}
+  - {fileID: 11400000, guid: e40a92bfd1cd8b74ebdef2e52165bd03, type: 2}
+  - {fileID: 11400000, guid: 99369526eaf533f4583369de9a755a43, type: 2}
+  - {fileID: 11400000, guid: 2913e15786920944a899639f2706e41d, type: 2}
+  - {fileID: 11400000, guid: 44f68fb5180a0a445b98d2721456f99e, type: 2}
+  - {fileID: 11400000, guid: ac3b0d31acbd3ba44a3f003f2efd59db, type: 2}
+  - {fileID: 11400000, guid: 90f756f7fea1cc34290631fb14f4a5a3, type: 2}
   _tankStoreList:
-  - {fileID: 11400000, guid: cda8a0eb33747d14cb09c753c0c0a5fe, type: 2}
-  - {fileID: 11400000, guid: 701ca886b7b470a45a455648181b4989, type: 2}
+  - {fileID: 11400000, guid: b77041c5ebc2738438ec70691402756a, type: 2}
+  - {fileID: 11400000, guid: 08f945c3f9115f74bbcb5d5cf2ecb7a8, type: 2}
+  - {fileID: 11400000, guid: 915f85b9b4bc9324a8e04cd0caae88cd, type: 2}
+  - {fileID: 11400000, guid: 78745b5a6edaba24db279517809f3f6c, type: 2}
+  - {fileID: 11400000, guid: e93b489baa7327d439bf6fe9d7cff47d, type: 2}
+  - {fileID: 11400000, guid: 13629d03061ecd34796a18901b9e0ea3, type: 2}
+  - {fileID: 11400000, guid: 4ed397ec79f98b14387e424f108803b4, type: 2}
+  - {fileID: 11400000, guid: 6ce89b9822e4107409bf3737a6c67808, type: 2}
+  - {fileID: 11400000, guid: 9a02fa004731a7747aca4e5748f7d2da, type: 2}
+  - {fileID: 11400000, guid: 34685f92824b3234494d35c8a153452a, type: 2}
   _deflectorStoreList:
-  - {fileID: 11400000, guid: 50e50db09c96f874d8c1f5f6a527f9f1, type: 2}
   - {fileID: 11400000, guid: 49c936a36dca5f846a984c3861c91327, type: 2}
+  - {fileID: 11400000, guid: f41124467abfb754588b7c1c033f3dd2, type: 2}
+  - {fileID: 11400000, guid: 16c3ec30fdc9c154abff81759b38717b, type: 2}
+  - {fileID: 11400000, guid: def6bae1a4661da4883d4dd2df97746e, type: 2}
+  - {fileID: 11400000, guid: 19deaee3b5069ab429a6ee54f0f6fe2a, type: 2}
+  - {fileID: 11400000, guid: 87c4321608ab84245b42d91b24aa662a, type: 2}
+  - {fileID: 11400000, guid: caf9824618095e947a4fc9d00118c471, type: 2}
+  - {fileID: 11400000, guid: b6af0f8c7dd1e9c41a164aad4e392928, type: 2}
+  - {fileID: 11400000, guid: d681d37b4699dfd409e7983d3b0b9442, type: 2}
+  - {fileID: 11400000, guid: 826fbf35297039d47bf8b9849acf98ea, type: 2}
   _storeView: {fileID: 2096471633}
   _store: {fileID: 1934494660}
   _launchButton: {fileID: 1786482093}

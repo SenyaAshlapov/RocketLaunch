@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b876bb9d89e6679439b925c04d69dc34, type: 3}
+  m_Name: 0_deflector
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 3812138504566362208, guid: 2ecd4d6f030af024e92272cb4a8e854d, type: 3}
+  Weight: 3
+  Price: 15
+  Icon: {fileID: 21300000, guid: d987b0f4d3cf87042aabd11847ed9fe2, type: 3}
+  ParametrIcon: {fileID: 21300000, guid: 3b88ed7551051de429b8e464c48dac9f, type: 3}
+  Name: 
+  BackGroundColor:
+    serializedVersion: 2
+    rgba: 0
+  isPayed: 0
+  ParametrValue: 0
+  Resistance: 4
