@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelData 1
   m_EditorClassIdentifier: 
   LevelID: 2
-  Budget: 0
-  Gravity: 0
-  AtmosphereResistance: 0
-  RequiredHeight: 0
+  Budget: 10
+  Gravity: 1
+  AtmosphereResistance: 1
+  RequiredHeight: 1

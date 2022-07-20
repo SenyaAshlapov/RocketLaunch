@@ -19,40 +19,59 @@ public class Store : MonoBehaviour
     [SerializeField]private GameObject _storeBar;
     [SerializeField]private Cell _cellPrefab;
 
-    void Start(){
-        Events.SelectEngineStore += initEngineStore;
-        Events.SelectDeflectorStore += initDeflectorStore;
-        Events.SelectTankStore += initTankStore;
-        Events.SelectPlumageStore += initPlumageStore;
+    void Start()
+    {
         Events.HideStore += hideStores;
         Events.LaunchRocket += hideAllStoreUI;
     }
 
-    private void initEngineStore() => initStore(_engineStoreList);
-    private void initDeflectorStore() => initStore(_deflectorStoreList);
-    private void initTankStore() => initStore(_tankStoreList);
-    private void initPlumageStore() => initStore(_plumageStoreList);
+    private void initEngineStore() 
+    {
+        initStore(_engineStoreList);
+        Events.SelectEngineStore?.Invoke();
+    }
+    private void initDeflectorStore()
+    {
+        initStore(_deflectorStoreList);
+        Events.SelectDeflectorStore?.Invoke();
+    }
+    private void initTankStore()
+    {
+        initStore(_tankStoreList);
+        Events.SelectTankStore?.Invoke();
+    }   
+    private void initPlumageStore() 
+    {
+        initStore(_plumageStoreList);
+        Events.SelectPlumageStore?.Invoke();
+    }
 
-    private void initStore(List<RocketPartData> partData){
+    private void initStore(List<RocketPartData> partData)
+    {
 
         _store.SetActive(true);
         _launchButton.SetActive(false);
 
-        foreach(Transform child in _storeView){
+        foreach(Transform child in _storeView)
+        {
             Destroy(child.gameObject);
         }
 
-        foreach(RocketPartData data in partData){
+        foreach(RocketPartData data in partData)
+        {
             var cell = Instantiate(_cellPrefab, _storeView);
             cell.InitCell(data.Icon,data.ParametrIcon, data.BackGroundColor, data.Name, data.Price, data.ParametrValue);
             cell.OnClickFunction = data.TryBuyRocketPart;
         }
     }
-    private void hideStores(){
+    public void hideStores()
+    {
         _store.SetActive(false);
         _launchButton.SetActive(true);
+
     }
-    private void hideAllStoreUI(){
+    private void hideAllStoreUI()
+    {
         _launchButton.SetActive(false);
         _store.SetActive(false);
         _storeBar.SetActive(false);

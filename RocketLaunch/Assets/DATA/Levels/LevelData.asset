@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelID: 1
   Budget: 100
-  Gravity: 0
-  AtmosphereResistance: 0
-  RequiredHeight: 0
+  Gravity: 1
+  AtmosphereResistance: 1
+  RequiredHeight: 1
