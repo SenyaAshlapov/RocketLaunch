@@ -25,7 +25,10 @@ public class Level : MonoBehaviour
         LevelBudget = _levelData.Budget;
         LevelGravity = _levelData.Gravity;
         LevelAtmosphereResistance = _levelData.AtmosphereResistance;
-        
+
+        Events.UpdateGravity?.Invoke(LevelGravity);
+        Events.UpdateAtmResistance?.Invoke(LevelAtmosphereResistance);
+        Events.UpdateBudgetUI?.Invoke(LevelBudget);
     }
 
     public Level(int id)

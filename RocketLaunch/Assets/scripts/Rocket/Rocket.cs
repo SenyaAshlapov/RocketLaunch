@@ -4,9 +4,6 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
 
-    public delegate void rocketStates();
-    public static rocketStates currentState;
-
     [Header("Rocket indicators")]
     [SerializeField]private float _rocketThrust = 0;
     [SerializeField]private float _rocketControl = 0;
@@ -29,39 +26,13 @@ public class Rocket : MonoBehaviour
     [SerializeField]private float _speedCoefficient;
     [SerializeField]private AnimationCurve _speedAcceleration;
     private float _launchTime = 0f;
-
-
-    private void Awake() {
-        Events.UpdateThrust += updateThrust;
-        Events.UpdateControl += updateControl;
-        Events.UpdateSpecificImpulse += updateSpecificImpulse;
-        Events.UpdateResistance += updateResistance;
-
-        Events.LaunchRocket += rocketStartLaunching;
-        Events.DestroyRocket += rockeDestroy;
-    }
-    private void Start() => currentState += rocketPreparation;   
      
     private void OnDestroy() {
         Events.UpdateThrust -= updateThrust;
         Events.UpdateControl -= updateControl;
         Events.UpdateSpecificImpulse -= updateSpecificImpulse;
         Events.UpdateResistance -= updateResistance;
-
-        Events.LaunchRocket -= rocketStartLaunching;
-        Events.DestroyRocket -= rockeDestroy;
-        
-        currentState -= rocketPreparation;
-        currentState -= rocketLaunching;
-        currentState -= Destroying;
     }
-
-    void FixedUpdate()
-    {
-        currentState?.Invoke();
-    }
-
-    
 
     private void updateThrust(float newThrust) => _rocketThrust = newThrust;
 
@@ -70,6 +41,44 @@ public class Rocket : MonoBehaviour
     private void updateSpecificImpulse(float newSpecificImpulse) => _rocketSpecificImpulse = newSpecificImpulse;
 
     private void updateResistance(float newResistance) => _rocketResistance = newResistance;
+    
+    public void SubscribeRocketToPreparationEvents(){
+        Events.UpdateThrust += updateThrust;
+        Events.UpdateControl += updateControl;
+        Events.UpdateSpecificImpulse += updateSpecificImpulse;
+        Events.UpdateResistance += updateResistance;
+    }
+
+    public void UnSubscribeRocketToPreparationEvents(){
+        Events.UpdateThrust -= updateThrust;
+        Events.UpdateControl -= updateControl;
+        Events.UpdateSpecificImpulse -= updateSpecificImpulse;
+        Events.UpdateResistance -= updateResistance;
+    }
+
+    public bool RockedIsReady(){
+        if(_rocketControl != 0 & _rocketResistance != 0 & _rocketSpecificImpulse != 0 & _rocketThrust != 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public void LaunchRocket(){
+        calculateSpeed();
+        if(_curveT < 1){
+            _launchTime += Time.deltaTime;
+            _curveT = _curveT + (_speedT * _speedAcceleration.Evaluate(_launchTime));
+        }
+        _rocket.transform.position = Bezier.GetCurveTrajectory(_curvePoint0.position, _curvePoint1.position, _curvePoint2.position, _curvePoint3.position, _curveT);
+        _rocket.transform.rotation = Quaternion.LookRotation(Bezier.GetCurveDeirection(_curvePoint0.position, _curvePoint1.position, _curvePoint2.position, _curvePoint3.position, _curveT));        
+    }
+
+    private void calculateSpeed(){
+       
+       _speedT = ((_rocketThrust * _rocketSpecificImpulse) - (Level.LevelAtmosphereResistance * Level.LevelGravity))/(_rocketResistance * RocketWeigt *  _speedCoefficient);
+    }
 
     private void OnDrawGizmos() {
 
@@ -83,46 +92,6 @@ public class Rocket : MonoBehaviour
             preveousePoint = point;
         }
 
-    }
-
-     private void rocketLaunching(){
-        
-        calculateSpeed();
-        if(_curveT < 1){
-            _launchTime += Time.deltaTime;
-            _curveT = _curveT + (_speedT * _speedAcceleration.Evaluate(_launchTime));
-        }
-        _rocket.transform.position = Bezier.GetCurveTrajectory(_curvePoint0.position, _curvePoint1.position, _curvePoint2.position, _curvePoint3.position, _curveT);
-        _rocket.transform.rotation = Quaternion.LookRotation(Bezier.GetCurveDeirection(_curvePoint0.position, _curvePoint1.position, _curvePoint2.position, _curvePoint3.position, _curveT));        
-    }
-
-    private void rocketPreparation(){
-        //some preparation logic
-    }
-
-    private void rockeDestroy(){
-        currentState -= rocketLaunching;
-        currentState += Destroying;
-        
-    }
-
-    private void rocketStartLaunching(){
-        if(_rocketControl != 0 & _rocketResistance != 0 & _rocketSpecificImpulse != 0 & _rocketThrust != 0){
-            currentState -= rocketPreparation;
-            currentState += rocketLaunching;
-            Events.HideStoreUI?.Invoke();
-            Events.ShowLaunchUI?.Invoke();
-        }
-        
-    }
-
-    private void calculateSpeed(){
-       
-       _speedT = ((_rocketThrust * _rocketSpecificImpulse) - (Level.LevelAtmosphereResistance * Level.LevelGravity))/(_rocketResistance * RocketWeigt *  _speedCoefficient);
-    }
-
-    private void Destroying(){
-        
     }
 
     private void OnTriggerEnter(Collider other){

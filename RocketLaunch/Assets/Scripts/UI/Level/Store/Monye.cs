@@ -11,7 +11,6 @@ public class Monye : MonoBehaviour
         Events.UpdateBudgetUI += updateBudget;
         Events.ShowLaunchUI += hideMoneyUI;
     }
-    private void Start() => updateBudget(Level.LevelBudget);
 
     private void OnDestroy() {
         Events.UpdateBudgetUI -= updateBudget;

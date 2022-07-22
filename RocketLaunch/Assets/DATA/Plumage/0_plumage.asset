@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f129b0a600db84e9558820ceed6c4d, type: 3}
   m_Name: 0_plumage
   m_EditorClassIdentifier: 
+  Parametr: 2
   Prefab: {fileID: 1531226470363369969, guid: c3debf5a88fd22248b9d6d34137b73b5, type: 3}
   Weight: 0
   Price: 0
   Icon: {fileID: 0}
-  ParametrIcon: {fileID: 0}
   Name: 
   BackGroundColor:
     serializedVersion: 2
     rgba: 0
-  isPayed: 0
-  ParametrValue: 0
-  Contorol: 0
+  Control: 0

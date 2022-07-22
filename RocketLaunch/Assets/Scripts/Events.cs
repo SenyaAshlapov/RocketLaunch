@@ -31,6 +31,8 @@ public class Events : MonoBehaviour
   
 
     public static FloatDelegate UpdateBudgetUI;
+    public static FloatDelegate UpdateGravity;
+    public static FloatDelegate UpdateAtmResistance;
 
 
     public delegate void SimpleDelegate();

@@ -1,3 +1,4 @@
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class StateMachine : MonoBehaviour
@@ -9,19 +10,20 @@ public class StateMachine : MonoBehaviour
 
     private PreparationState _preparationState;
     private LaunchingState _launchingState;
-    private DestroyState _destroyState;
-    private FinishState _finishState;
 
+    private void Awake(){
+        Events.LaunchRocket += tryLaunch;
+    }
     private void Start(){
         _preparationState = new PreparationState();
         _launchingState = new LaunchingState();
-        _destroyState = new DestroyState();
-        _finishState =  new FinishState();
 
         _currentState = _preparationState;
+
+        _currentState.EnterState(_rocket,_store);
     }
 
-    private void Update(){
+    private void FixedUpdate(){
         _currentState.LogicState(_rocket,_store);
     }
 
@@ -30,6 +32,13 @@ public class StateMachine : MonoBehaviour
         newState.EnterState(_rocket,_store);
         _currentState = newState;
     }
+
+    private void tryLaunch(){
+        if(_rocket.RockedIsReady() == true){
+            changeState(_launchingState);
+        }
+    }
+
 
 
 }

@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8416b023561c98041b52232976f0f768, type: 3}
   m_Name: tank_9
   m_EditorClassIdentifier: 
+  Parametr: 1
   Prefab: {fileID: 7226063942438674632, guid: 8b77258f0b769e34c858ad5329bd436d, type: 3}
   Weight: 0
   Price: 0
   Icon: {fileID: 21300000, guid: 4056489410b735f4aaa7906983004e57, type: 3}
-  ParametrIcon: {fileID: 21300000, guid: 4056489410b735f4aaa7906983004e57, type: 3}
   Name: GS
   BackGroundColor:
     serializedVersion: 2
     rgba: 4294931888
-  isPayed: 0
-  ParametrValue: 0
   SpecificImpulse: 0

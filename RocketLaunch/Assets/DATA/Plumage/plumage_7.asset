@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f129b0a600db84e9558820ceed6c4d, type: 3}
   m_Name: plumage_7
   m_EditorClassIdentifier: 
+  Parametr: 2
   Prefab: {fileID: 6665795402972418037, guid: 857928d856427ba489137e2faf5d4476, type: 3}
   Weight: 6
   Price: 15
   Icon: {fileID: 21300000, guid: f922006e6327b9c49b49385e80d8bbd0, type: 3}
-  ParametrIcon: {fileID: 21300000, guid: af9759fa32dbda54a8532c4d17862896, type: 3}
   Name: Escalibur
   BackGroundColor:
     serializedVersion: 2
     rgba: 4294931888
-  isPayed: 0
-  ParametrValue: 0
-  Contorol: 3.5
+  Control: 0

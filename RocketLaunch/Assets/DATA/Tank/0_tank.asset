@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8416b023561c98041b52232976f0f768, type: 3}
   m_Name: 0_tank
   m_EditorClassIdentifier: 
+  Parametr: 1
   Prefab: {fileID: 2064232425908916032, guid: fe422fad0d215934287461461df03ce3, type: 3}
   Weight: 0
   Price: 0
   Icon: {fileID: 0}
-  ParametrIcon: {fileID: 0}
   Name: 
   BackGroundColor:
     serializedVersion: 2
     rgba: 0
-  isPayed: 0
-  ParametrValue: 0
   SpecificImpulse: 0

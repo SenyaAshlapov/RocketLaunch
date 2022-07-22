@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8a5c25a98e8d6429a67fb771583e7c, type: 3}
   m_Name: engine_6
   m_EditorClassIdentifier: 
+  Parametr: 3
   Prefab: {fileID: 2915992840138598275, guid: 6125353c14d49e448b2c28654cb418d4, type: 3}
   Weight: 5
   Price: 50
   Icon: {fileID: 21300000, guid: 5e8af27db50b7cd47981339838395ea2, type: 3}
-  ParametrIcon: {fileID: 21300000, guid: 4a014ca7a7aabac44a371bbeaefa3e7d, type: 3}
   Name: FX-100
   BackGroundColor:
     serializedVersion: 2
     rgba: 4285923317
-  isPayed: 0
-  ParametrValue: 0
   Thrust: 6

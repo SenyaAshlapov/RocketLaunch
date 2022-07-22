@@ -24,11 +24,9 @@ public class InformationWindow : MonoBehaviour
         Events.UpdateWeight += updateWeight;
 
         Events.HideStoreUI += closeWindow;
-    }
-    private void Start()
-    {
-        _gravity.text = Level.LevelGravity.ToString();
-        _atmResistance.text = Level.LevelAtmosphereResistance.ToString();
+
+        Events.UpdateAtmResistance += updateAtmResistance;
+        Events.UpdateGravity += updateGravity;
     }
 
     private void OnDestroy() 
@@ -40,6 +38,10 @@ public class InformationWindow : MonoBehaviour
         Events.UpdateWeight -= updateWeight;
 
         Events.HideStoreUI -= closeWindow;
+
+        
+        Events.UpdateAtmResistance -= updateAtmResistance;
+        Events.UpdateGravity -= updateGravity;
     }
 
     
@@ -49,4 +51,8 @@ public class InformationWindow : MonoBehaviour
     private void updateThrust(float newThrust) => _thrust.text = newThrust.ToString();
     private void updateWeight(float newWeight) => _totalWeight.text = newWeight.ToString();
     private void closeWindow() => _informationWindow.SetActive(false);
+
+    private void updateGravity(float gravity) =>  _gravity.text = gravity.ToString();
+    private void updateAtmResistance(float resistance) =>  _atmResistance.text = resistance.ToString();
+
 }
