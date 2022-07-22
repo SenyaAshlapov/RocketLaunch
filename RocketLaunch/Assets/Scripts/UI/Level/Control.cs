@@ -4,9 +4,12 @@ public class Control : MonoBehaviour
 {
 
     [SerializeField]private GameObject _controlUI;
-    [SerializeField]private GameObject _controller;
-    [SerializeField]private float _controlSpeed = 0;
+    [SerializeField]private Transform _controller;
+    [SerializeField]private Transform _overEngine;
+    private float _controlSpeed = 0;
     [SerializeField]private float _currentSpeed;
+    [SerializeField]private float _speedCoeficent;
+    [SerializeField]private float _overEngineScaleSpeed;
     private float _controlDerection = 1;
     private void Awake() {
         Events.ShowLaunchUI += startControling;
@@ -22,7 +25,8 @@ public class Control : MonoBehaviour
     }
 
     private void Update() {
-        _controller.transform.Translate(new Vector3(1f,0,0) * Time.deltaTime * _controlSpeed * _controlDerection);
+        _controller.Translate(new Vector3(1f,0,0) * Time.deltaTime * _controlSpeed * _controlDerection);
+        _overEngine.localScale -= new Vector3(_overEngineScaleSpeed, 0, 0);
 
         if (Input.GetKeyDown("space")){
             _controlDerection *= -1;
@@ -36,7 +40,7 @@ public class Control : MonoBehaviour
     }
 
     private void updateSpeed(float control){
-        _currentSpeed = 100 / control;
+        _currentSpeed = _speedCoeficent / control;
     }
 
     private void stopContolling(){

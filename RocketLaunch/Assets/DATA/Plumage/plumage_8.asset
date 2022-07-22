@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parametr: 2
   Prefab: {fileID: 6320309901284024701, guid: d0d3dc6a8ed58d442ad16284bcceee92, type: 3}
-  Weight: 6
-  Price: 15
+  Weight: 9
+  Price: 55
   Icon: {fileID: 21300000, guid: 0ecfd5a149420bd4abe677ad9407eb50, type: 3}
   Name: Escalibur
   BackGroundColor:
     serializedVersion: 2
     rgba: 4294931888
-  Control: 0
+  Control: 2

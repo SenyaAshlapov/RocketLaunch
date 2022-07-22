@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parametr: 1
   Prefab: {fileID: 3452735997756281031, guid: b54ab61a09559894bbbf8cd0e57ec192, type: 3}
-  Weight: 0
-  Price: 0
+  Weight: 45
+  Price: 70
   Icon: {fileID: 21300000, guid: 811e988cba675e34fb3ed213db762775, type: 3}
-  Name: EXp +
+  Name: EXp "plus"
   BackGroundColor:
     serializedVersion: 2
     rgba: 4294931888
-  SpecificImpulse: 0
+  SpecificImpulse: 58

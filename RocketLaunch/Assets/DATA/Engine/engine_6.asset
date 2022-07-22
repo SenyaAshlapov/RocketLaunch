@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parametr: 3
   Prefab: {fileID: 2915992840138598275, guid: 6125353c14d49e448b2c28654cb418d4, type: 3}
-  Weight: 5
-  Price: 50
+  Weight: 18
+  Price: 55
   Icon: {fileID: 21300000, guid: 5e8af27db50b7cd47981339838395ea2, type: 3}
-  Name: FX-100
+  Name: FX-300
   BackGroundColor:
     serializedVersion: 2
     rgba: 4285923317
-  Thrust: 6
+  Thrust: 47

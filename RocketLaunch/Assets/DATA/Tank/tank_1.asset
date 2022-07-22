@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parametr: 1
   Prefab: {fileID: 6458838904853695588, guid: 031236ffa3e2e174ca5c2bd884887a79, type: 3}
-  Weight: 0
-  Price: 0
+  Weight: 30
+  Price: 15
   Icon: {fileID: 21300000, guid: ee43f92babd746d4192213df1bd00f18, type: 3}
   Name: TN-1
   BackGroundColor:

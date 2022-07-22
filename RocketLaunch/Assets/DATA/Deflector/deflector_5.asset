@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b876bb9d89e6679439b925c04d69dc34, type: 3}
   m_Name: deflector_5
   m_EditorClassIdentifier: 
+  Parametr: 0
   Prefab: {fileID: 7260628461372068686, guid: cab23f8948e4c8f4d8eb43d54642fa7c, type: 3}
-  Weight: 6
-  Price: 20
+  Weight: 7
+  Price: 30
   Icon: {fileID: 21300000, guid: 1cfa3ec2b99db044f8cf0b99ab7587b0, type: 3}
-  ParametrIcon: {fileID: 21300000, guid: 3b88ed7551051de429b8e464c48dac9f, type: 3}
-  Name: DEF-2
+  Name: DEF-8
   BackGroundColor:
     serializedVersion: 2
     rgba: 4287299445
-  isPayed: 0
-  ParametrValue: 0
-  Resistance: 2
+  Resistance: 23

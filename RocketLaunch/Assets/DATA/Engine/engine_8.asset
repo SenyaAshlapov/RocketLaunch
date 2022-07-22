@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parametr: 3
   Prefab: {fileID: 5212188867626925207, guid: 937a74ba2c0eb5346840dd671e09e5f8, type: 3}
-  Weight: 5
-  Price: 50
+  Weight: 20
+  Price: 85
   Icon: {fileID: 21300000, guid: 85857458b6899a44e9dd16ca25ff0cfd, type: 3}
-  Name: FX-100
+  Name: '"Phontom"'
   BackGroundColor:
     serializedVersion: 2
     rgba: 4294931888
-  Thrust: 6
+  Thrust: 73
