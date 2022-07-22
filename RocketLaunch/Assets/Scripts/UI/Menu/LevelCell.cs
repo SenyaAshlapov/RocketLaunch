@@ -12,9 +12,7 @@ public class LevelCell : MonoBehaviour
     [SerializeField]private bool _isActive;
 
 
-    public void InitLevelCell(
-        int levelID,
-        bool isActive)
+    public void InitLevelCell(int levelID,bool isActive)
     {
         _levelID = levelID;
         _levelNumber.text = levelID.ToString();
@@ -22,9 +20,7 @@ public class LevelCell : MonoBehaviour
             onClick = SceneManager.LoadScene;
     }
 
-    public void OnClick() {
-        onClick(_levelID.ToString());
-    } 
+    public void OnClick() => onClick(_levelID.ToString());
 
     
 }

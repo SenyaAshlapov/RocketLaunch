@@ -13,11 +13,16 @@ public class RocketPartData : ScriptableObject {
     public Color32 BackGroundColor;
     
     public bool isPayed;
-    [HideInInspector]public float ParametrValue;
+    public float ParametrValue;
 
     public virtual void TryBuyRocketPart(){
         
     }
+
+    public virtual float ReturnParametr(){
+        return(0);
+    }
+
 
     
 

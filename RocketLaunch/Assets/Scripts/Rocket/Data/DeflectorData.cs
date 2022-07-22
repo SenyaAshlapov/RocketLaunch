@@ -21,4 +21,9 @@ public class DeflectorData :RocketPartData
                 Debug.Log(Level.LevelBudget);
         }
     }
+
+    public override float ReturnParametr(){
+        return(Resistance);
+    }
+
 }

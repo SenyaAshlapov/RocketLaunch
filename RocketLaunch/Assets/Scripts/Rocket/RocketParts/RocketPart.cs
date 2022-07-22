@@ -7,8 +7,12 @@ public class RocketPart : MonoBehaviour
 
     public GameObject _partModel;
 
-    void Awake(){
+    private void Awake(){
         Events.DestroyRocket += explosion;
+    }
+
+    private void OnDestroy() {
+        Events.DestroyRocket -= explosion;
     }
     public void previewPart(GameObject part) 
     {

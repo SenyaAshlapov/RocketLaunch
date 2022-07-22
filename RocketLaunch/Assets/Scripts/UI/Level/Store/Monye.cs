@@ -7,10 +7,15 @@ public class Monye : MonoBehaviour
     [SerializeField]private TMP_Text _budget;
     [SerializeField]private GameObject _moneyUI;
 
-    void Start(){
+    private void Awake() {
         Events.UpdateBudgetUI += updateBudget;
-        Events.LaunchRocket += hideMoneyUI;
-        updateBudget(Level.LevelBudget);
+        Events.ShowLaunchUI += hideMoneyUI;
+    }
+    private void Start() => updateBudget(Level.LevelBudget);
+
+    private void OnDestroy() {
+        Events.UpdateBudgetUI -= updateBudget;
+        Events.ShowLaunchUI -= hideMoneyUI;
     }
 
     void updateBudget(float nuewBudget){

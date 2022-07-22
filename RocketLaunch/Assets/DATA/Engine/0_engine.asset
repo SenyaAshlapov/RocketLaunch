@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 0_engine
   m_EditorClassIdentifier: 
   Prefab: {fileID: 112546611307825857, guid: c5ddac4721d2d134d859dbcbf5b946f0, type: 3}
-  Weight: 4
-  Price: 10
+  Weight: 0
+  Price: 0
   Icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   ParametrIcon: {fileID: 21300000, guid: 4a014ca7a7aabac44a371bbeaefa3e7d, type: 3}
   Name: E-300
@@ -23,4 +23,4 @@ MonoBehaviour:
     rgba: 4294931902
   isPayed: 0
   ParametrValue: 0
-  Thrust: 2
+  Thrust: 0

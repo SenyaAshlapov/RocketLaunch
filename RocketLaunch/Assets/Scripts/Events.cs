@@ -39,8 +39,10 @@ public class Events : MonoBehaviour
     public static SimpleDelegate SelectTankStore;
     public static SimpleDelegate SelectPlumageStore;
     public static SimpleDelegate HideStore;
+    public static SimpleDelegate HideStoreUI;
 
     public static SimpleDelegate LaunchRocket;
+    public static SimpleDelegate ShowLaunchUI;
     public static SimpleDelegate DestroyRocket;
     public static SimpleDelegate LevelComplete;
 }

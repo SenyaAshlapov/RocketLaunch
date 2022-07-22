@@ -8,8 +8,8 @@ public class EngineData : RocketPartData
     [Space(15)]
     public float Thrust;
 
-    void Start(){
-        ParametrValue = Thrust;
+    void Awake(){
+        
     }
 
     public override void TryBuyRocketPart()
@@ -28,4 +28,9 @@ public class EngineData : RocketPartData
         }
             
     }
+
+    public override float ReturnParametr(){
+        return(Thrust);
+    }
+
 }

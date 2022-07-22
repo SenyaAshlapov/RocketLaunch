@@ -18,50 +18,37 @@ public class StoreCamera : MonoBehaviour
         Events.SelectEngineStore += lookAtEngine;
         Events.HideStore += lookAtRocket;
     }
-
-    private void lookAtDeflector() {
-        _deflectorCamera.SetActive(true);
-        _tankCamera.SetActive(false);
-        _plumageCamera.SetActive(false);
-        _engineCamera.SetActive(false);
-
-        _mainCamera.SetActive(false);
+    void OnDestroy(){
+        Events.SelectDeflectorStore -= lookAtDeflector;
+        Events.SelectTankStore -= lookAtTank;
+        Events.SelectPlumageStore -= lookAtPlumage;
+        Events.SelectEngineStore -= lookAtEngine;
+        Events.HideStore -= lookAtRocket;
     }
 
-    private void lookAtTank() {
-        _deflectorCamera.SetActive(false);
-        _tankCamera.SetActive(true);
-        _plumageCamera.SetActive(false);
-        _engineCamera.SetActive(false);
+    private void lookAtDeflector() => activateCamera(_deflectorCamera);  
 
-        _mainCamera.SetActive(false);
-    }
+    private void lookAtTank()  => activateCamera(_tankCamera);  
 
-    private void lookAtPlumage() {
-        _deflectorCamera.SetActive(false);
-        _tankCamera.SetActive(false);
-        _plumageCamera.SetActive(true);
-        _engineCamera.SetActive(false);
+    private void lookAtPlumage()  => activateCamera(_plumageCamera);  
 
-        _mainCamera.SetActive(false);
-    }
-
-    private void lookAtEngine() {
-        _deflectorCamera.SetActive(false);
-        _tankCamera.SetActive(false);
-        _plumageCamera.SetActive(false);
-        _engineCamera.SetActive(true);
-
-        _mainCamera.SetActive(false);
-    }
+    private void lookAtEngine()  => activateCamera(_engineCamera);  
 
     private void lookAtRocket() {
-        _deflectorCamera.SetActive(false);
-        _tankCamera.SetActive(false);
-        _plumageCamera.SetActive(false);
-        _engineCamera.SetActive(false);
+        _activeCamera.SetActive(false);
 
-        _mainCamera.SetActive(true);;
+        _mainCamera.SetActive(true);
+    }
+
+    private void activateCamera(GameObject activeCamera){
+        if(_activeCamera != null){
+            _activeCamera.SetActive(false);
+        }
+        
+       _activeCamera = activeCamera;
+        activeCamera.SetActive(true);
+        _mainCamera.SetActive(false);
+                       
     }
 
     

@@ -12,6 +12,7 @@ public class Cell : MonoBehaviour
     [SerializeField]private Text _name;
     [SerializeField]private Text _price;
     [SerializeField]private Text _parametrValue;
+    [SerializeField]private Text _weightValue;
     
     public bool IsPayed;
 
@@ -21,7 +22,8 @@ public class Cell : MonoBehaviour
         Color32 backGroundColor,
         string name,
         float price,
-        float parametrValue)
+        float parametrValue,
+        float weight)
         
     {
         _icon.sprite = icon;
@@ -30,6 +32,8 @@ public class Cell : MonoBehaviour
         _name.text = name;
         _price.text = price.ToString();
         _parametrValue.text = parametrValue.ToString();
+        _weightValue.text = weight.ToString();
+
         _backGround.color = backGroundColor;
     }
 

@@ -20,4 +20,9 @@ public class TankData : RocketPartData
                 Debug.Log(Level.LevelBudget);
         }
     }
+    public override float ReturnParametr(){
+        return(SpecificImpulse);
+    }
+
+
 }

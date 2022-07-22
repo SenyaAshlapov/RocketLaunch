@@ -19,10 +19,16 @@ public class Store : MonoBehaviour
     [SerializeField]private GameObject _storeBar;
     [SerializeField]private Cell _cellPrefab;
 
-    void Start()
+    private void Awake()
     {
         Events.HideStore += hideStores;
-        Events.LaunchRocket += hideAllStoreUI;
+        Events.HideStoreUI += hideAllStoreUI;
+    }
+
+    private void OnDestroy()
+    {
+        Events.HideStore -= hideStores;
+        Events.HideStoreUI -= hideAllStoreUI;
     }
 
     private void initEngineStore() 
@@ -48,33 +54,46 @@ public class Store : MonoBehaviour
 
     private void initStore(List<RocketPartData> partData)
     {
+        if(_store != null & _launchButton != null){
+            _store.SetActive(true);
+            _launchButton.SetActive(false);
 
-        _store.SetActive(true);
-        _launchButton.SetActive(false);
+            foreach(Transform child in _storeView)
+            {
+                Destroy(child.gameObject);
+            }
 
-        foreach(Transform child in _storeView)
-        {
-            Destroy(child.gameObject);
+            foreach(RocketPartData data in partData)
+            {
+                var cell = Instantiate(_cellPrefab, _storeView);
+                cell.InitCell(data.Icon,
+                    data.ParametrIcon, 
+                    data.BackGroundColor, 
+                    data.Name, data.Price, 
+                    data.ReturnParametr(),
+                    data.Weight);
+                cell.OnClickFunction = data.TryBuyRocketPart;
+            }
         }
-
-        foreach(RocketPartData data in partData)
-        {
-            var cell = Instantiate(_cellPrefab, _storeView);
-            cell.InitCell(data.Icon,data.ParametrIcon, data.BackGroundColor, data.Name, data.Price, data.ParametrValue);
-            cell.OnClickFunction = data.TryBuyRocketPart;
-        }
+        
     }
     public void hideStores()
     {
-        _store.SetActive(false);
-        _launchButton.SetActive(true);
+        if(_store != null & _launchButton != null){
+            _store.SetActive(false);
+            _launchButton.SetActive(true);
+        }
+
 
     }
     private void hideAllStoreUI()
     {
+        
         _launchButton.SetActive(false);
         _store.SetActive(false);
         _storeBar.SetActive(false);
+        
+        
     }
 
     

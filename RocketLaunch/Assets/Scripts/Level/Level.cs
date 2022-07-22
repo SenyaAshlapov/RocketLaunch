@@ -6,21 +6,26 @@ public class Level : MonoBehaviour
 {
     [SerializeField]private LevelData _levelData;
 
-    public int LevelID;
+    public static int LevelID;
     public static float LevelBudget;
     public static float LevelGravity;
     public static float LevelAtmosphereResistance;
-    //public static float LevelRequiredHeight;
-    void Start(){
+    
+    void Awake(){
         Events.LevelComplete += completeLevel;
     }
-    void Awake()
+
+    void OnDestroy() {
+        Events.LevelComplete -= completeLevel;
+    }
+
+    void Start()
     {
         LevelID = _levelData.LevelID;
         LevelBudget = _levelData.Budget;
         LevelGravity = _levelData.Gravity;
         LevelAtmosphereResistance = _levelData.AtmosphereResistance;
-        //LevelRequiredHeight = _levelData.RequiredHeight;
+        
     }
 
     public Level(int id)

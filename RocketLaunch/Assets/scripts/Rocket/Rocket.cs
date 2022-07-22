@@ -8,10 +8,10 @@ public class Rocket : MonoBehaviour
     public static rocketStates currentState;
 
     [Header("Rocket indicators")]
-    [SerializeField]private float _rocketThrust;
-    [SerializeField]private float _rocketControl;
-    [SerializeField]private float _rocketSpecificImpulse;
-    [SerializeField]private float _rocketResistance;
+    [SerializeField]private float _rocketThrust = 0;
+    [SerializeField]private float _rocketControl = 0;
+    [SerializeField]private float _rocketSpecificImpulse = 0;
+    [SerializeField]private float _rocketResistance = 0;
     public static float RocketWeigt;
     
 
@@ -31,17 +31,29 @@ public class Rocket : MonoBehaviour
     private float _launchTime = 0f;
 
 
-    void Start(){
+    private void Awake() {
         Events.UpdateThrust += updateThrust;
         Events.UpdateControl += updateControl;
         Events.UpdateSpecificImpulse += updateSpecificImpulse;
         Events.UpdateResistance += updateResistance;
 
-        currentState += rocketPreparation;
-
         Events.LaunchRocket += rocketStartLaunching;
         Events.DestroyRocket += rockeDestroy;
+    }
+    private void Start() => currentState += rocketPreparation;   
+     
+    private void OnDestroy() {
+        Events.UpdateThrust -= updateThrust;
+        Events.UpdateControl -= updateControl;
+        Events.UpdateSpecificImpulse -= updateSpecificImpulse;
+        Events.UpdateResistance -= updateResistance;
+
+        Events.LaunchRocket -= rocketStartLaunching;
+        Events.DestroyRocket -= rockeDestroy;
         
+        currentState -= rocketPreparation;
+        currentState -= rocketLaunching;
+        currentState -= Destroying;
     }
 
     void FixedUpdate()
@@ -91,11 +103,17 @@ public class Rocket : MonoBehaviour
     private void rockeDestroy(){
         currentState -= rocketLaunching;
         currentState += Destroying;
+        
     }
 
     private void rocketStartLaunching(){
-        currentState -= rocketPreparation;
-        currentState += rocketLaunching;
+        if(_rocketControl != 0 & _rocketResistance != 0 & _rocketSpecificImpulse != 0 & _rocketThrust != 0){
+            currentState -= rocketPreparation;
+            currentState += rocketLaunching;
+            Events.HideStoreUI?.Invoke();
+            Events.ShowLaunchUI?.Invoke();
+        }
+        
     }
 
     private void calculateSpeed(){
@@ -104,7 +122,7 @@ public class Rocket : MonoBehaviour
     }
 
     private void Destroying(){
-
+        
     }
 
     private void OnTriggerEnter(Collider other){
