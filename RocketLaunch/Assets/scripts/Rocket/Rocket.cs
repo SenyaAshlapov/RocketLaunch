@@ -10,6 +10,11 @@ public class Rocket : MonoBehaviour
     [SerializeField]private float _rocketSpecificImpulse = 0;
     [SerializeField]private float _rocketResistance = 0;
     public static float RocketWeigt;
+    [Header("Rocket parts")]
+    [SerializeField]private Deflector _deflector;
+    [SerializeField]private Tank _tank;
+    [SerializeField]private Plumage _plumage;
+    [SerializeField]private Engine _engine;
     
 
     [Header("Trajectory Settings")]
@@ -100,6 +105,12 @@ public class Rocket : MonoBehaviour
         }
     }
 
+    public void DestroyRocket(){
+        _deflector.Explosion();
+        _tank.Explosion();
+        _plumage.Explosion();
+        _engine.Explosion();
+    }
 } 
 
 

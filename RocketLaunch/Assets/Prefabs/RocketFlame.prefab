@@ -3813,7 +3813,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -4822,7 +4822,7 @@ AudioSource:
   m_GameObject: {fileID: 6015693227229784905}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 98a765a10ba31134fa09f3c78eb80d70, type: 2}
+  OutputAudioMixerGroup: {fileID: 8230558502911799799, guid: 98a765a10ba31134fa09f3c78eb80d70, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2dd521eaeed5d0043bfd050e8fee33c8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.058

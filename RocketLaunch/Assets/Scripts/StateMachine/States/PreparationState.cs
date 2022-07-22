@@ -6,7 +6,7 @@ public class PreparationState : IState
     public void EnterState(Rocket rocket,Store store){
         rocket.SubscribeRocketToPreparationEvents();
         store.SubscribeStoreToPreparationEvents();
-        Events.UpdateBudgetUI?.Invoke(Level.LevelBudget);
+        
 
         Debug.Log("Preparation enter");
     }
