@@ -17,29 +17,43 @@ public class BaseStore : MonoBehaviour
 
     private BaseData _nextBase;
     ////потом удалить
-    private void Update() {
+    private void Update() 
+    {
         if (Input.GetKey(KeyCode.P)){
             LevelSaverLoader.Reset();
         }
+
     }
-    private void Start() {
+
+    private void Start() 
+    {
         initStore();
     }
 
 
-    private void initStore(){
-        _nextBase = _basesList[LevelSaverLoader.LoadBaseRang() + 1];
+    private void initStore()
+    {
+        Debug.Log(LevelSaverLoader.LoadBaseRang());
+        if(LevelSaverLoader.LoadBaseRang() != (_basesList.Count-1))
+        {
+            _nextBase = _basesList[LevelSaverLoader.LoadBaseRang() + 1];
+            _nextBaseIcon.sprite = _nextBase.BaseIcon;
+            _nextBaseBackgroundImage.color = _nextBase.BaseUIColor;
 
-        _nextBaseIcon.sprite = _nextBase.BaseIcon;
-        _nextBaseBackgroundImage.color = _nextBase.BaseUIColor;
+            _nextBasePrice.text = _nextBase.BasePrice.ToString();
+            _nextBaseName.text = _nextBase.BaseName;
+            _nextBaseDescription.text = _nextBase.BaseDescription;
+        }
 
-        _nextBasePrice.text = _nextBase.BasePrice.ToString();
-        _nextBaseName.text = _nextBase.BaseName;
-        _nextBaseDescription.text = _nextBase.BaseDescription;
+        
+
+
     }
 
-    public void UpdateBase(){
-        if(LevelSaverLoader.LoadBudget() >= _nextBase.BasePrice){
+    public void UpdateBase()
+    {
+        if(LevelSaverLoader.LoadBudget() >= _nextBase.BasePrice)
+        {
             LevelSaverLoader.SaveBudget(LevelSaverLoader.LoadBudget() - _nextBase.BasePrice);
             LevelSaverLoader.SaveBaseRang(LevelSaverLoader.LoadBaseRang() + 1);
             initStore();            
@@ -49,7 +63,14 @@ public class BaseStore : MonoBehaviour
         }
     }
 
+    private void OnMouseDown() {
+        if(LevelSaverLoader.LoadBaseRang() != (_basesList.Count-1)){
+            showBaseStore();
+            initStore();
+        }
+
+    }
     private void showBaseStore() => _basesStore.SetActive(true);
 
-    private void hideBaseStore() => _basesStore.SetActive(false);
+    public void HideBaseStore() => _basesStore.SetActive(false);
 }

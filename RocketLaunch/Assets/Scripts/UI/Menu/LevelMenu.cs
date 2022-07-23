@@ -10,19 +10,19 @@ public class LevelMenu : MonoBehaviour
     [SerializeField]private Transform _container;
 
     [SerializeField]private MissionInformationWindow _informationWindow;
+    [SerializeField]private GameObject _levelMenuWindow;
 
-    private void Awake() {
+    private void Awake() 
+    {
         Events.UpdateBaseRang += initLevelList;
     }
     void Start() =>  initLevelList();
-       
 
-
-    private void initLevelList(){
+    private void initLevelList()
+    {
         int count = LevelSaverLoader.LoadLevels();
 
         int rang = LevelSaverLoader.LoadBaseRang();
-        Debug.Log(count);
 
         foreach(Transform child in _container){
             Destroy(child.gameObject);
@@ -40,4 +40,11 @@ public class LevelMenu : MonoBehaviour
                 
         }
     }
+
+    private void OnMouseDown() {
+        showLevelMenu();
+    }
+
+    private void showLevelMenu() => _levelMenuWindow.SetActive(true);
+    public void HideLevelMenu() => _levelMenuWindow.SetActive(false);
 }

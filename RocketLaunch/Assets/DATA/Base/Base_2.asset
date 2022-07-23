@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Base_2
   m_EditorClassIdentifier: 
   BaseRang: 2
-  BasePrefab: {fileID: 0}
+  BasePrefab: {fileID: 3388455809267367180, guid: c32458a6841d08e438f8dcd16db7ccf6, type: 3}
   BasePrice: 10
   BaseIcon: {fileID: 21300000, guid: d717a41b618c64b41b3ac3c9346c4016, type: 3}
   BaseUIColor:

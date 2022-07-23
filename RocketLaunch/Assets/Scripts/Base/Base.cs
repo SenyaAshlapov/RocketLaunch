@@ -8,19 +8,27 @@ public class Base : MonoBehaviour
     [SerializeField]private List<BaseData> _basesList = new List<BaseData>();
     [SerializeField]private Transform _basePosition;
 
-    private void Awake() {
+    private void Awake() 
+    {
         Events.UpdateBaseRang += renedrBase;
     }
 
-    private void OnDestroy() {
+    private void OnDestroy() 
+    {
         Events.UpdateBaseRang -= renedrBase;
     }
-    private void Start() {        
+    private void Start() 
+    {        
         renedrBase();
     }
 
-    private void renedrBase(){
+    private void renedrBase()
+    {
         _baseRang = LevelSaverLoader.LoadBaseRang();
+
+        foreach(Transform child in _basePosition){
+            Destroy(child.gameObject);
+        }
 
         foreach(BaseData data in _basesList){
             if(data.BaseRang == _baseRang){
@@ -28,4 +36,5 @@ public class Base : MonoBehaviour
             }
         }       
     }
+
 }

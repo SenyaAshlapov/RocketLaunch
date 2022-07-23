@@ -34,13 +34,15 @@ public class LevelCell : MonoBehaviour
         }           
     }
 
-    public void showMissionInformationWindow(){
+    public void showMissionInformationWindow()
+    {
         _missionInformationWindow.gameObject.SetActive(true);
         _missionInformationWindow.ShowInformation(_thisLevel.LevelCodeName.ToString(), _thisLevel.LevelDescription.ToString(), _thisLevel.Budget);
 
     }
 
-    public void hideMissionInformationWindow(){
+    public void hideMissionInformationWindow()
+    {
         _missionInformationWindow.gameObject.SetActive(false);
     }
 

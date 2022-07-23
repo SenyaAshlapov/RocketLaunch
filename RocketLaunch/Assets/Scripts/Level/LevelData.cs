@@ -2,7 +2,8 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "RocketLaunch/LevelData", order = 0)]
-public class LevelData : ScriptableObject {
+public class LevelData : ScriptableObject 
+{
     
     public int LevelID;
     public int LevelRang;

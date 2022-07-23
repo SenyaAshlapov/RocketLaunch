@@ -43,7 +43,7 @@ public class LevelSaverLoader
     public static void Reset(){
         PlayerPrefs.SetInt(SAVES_KEY,1);
         PlayerPrefs.SetInt(SAVE_BASE_RANG_KEY,0);
-        PlayerPrefs.SetInt(SAVE_BUDGET_KEY,0);
+        PlayerPrefs.SetInt(SAVE_BUDGET_KEY,20);
     }
 
     public static void SaveBaseRang(int rang){      
@@ -61,8 +61,9 @@ public class LevelSaverLoader
         }
     }
 
-    public static void SaveBudget(int budget){
-        PlayerPrefs.SetInt(SAVE_BASE_RANG_KEY, budget);
+    public static void SaveBudget(int budget)
+    {
+        PlayerPrefs.SetInt(SAVE_BUDGET_KEY, budget);
     }
     public static int LoadBudget(){
         if(PlayerPrefs.HasKey(SAVE_BUDGET_KEY))
