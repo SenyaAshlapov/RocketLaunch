@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: LevelData_2
   m_EditorClassIdentifier: 
   LevelID: 2
-  Budget: 10
-  Gravity: 1
-  AtmosphereResistance: 1
-  RequiredHeight: 1
+  LevelRang: 0
+  Budget: 120
+  Gravity: 10.1
+  AtmosphereResistance: 16
+  LevelCodeName: TROPIC-2
+  LevelDescription: second try to launch this shit to space

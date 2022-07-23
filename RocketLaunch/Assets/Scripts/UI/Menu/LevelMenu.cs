@@ -9,9 +9,19 @@ public class LevelMenu : MonoBehaviour
     [SerializeField]private LevelCell _cellPrefab;
     [SerializeField]private Transform _container;
 
-    void Start()
-    {
+    [SerializeField]private MissionInformationWindow _informationWindow;
+
+    private void Awake() {
+        Events.UpdateBaseRang += initLevelList;
+    }
+    void Start() =>  initLevelList();
+       
+
+
+    private void initLevelList(){
         int count = LevelSaverLoader.LoadLevels();
+
+        int rang = LevelSaverLoader.LoadBaseRang();
         Debug.Log(count);
 
         foreach(Transform child in _container){
@@ -22,16 +32,12 @@ public class LevelMenu : MonoBehaviour
             bool active = true;
             if(level.LevelID > count)
                 active = false;
+            if(level.LevelRang <= rang){
+                var cell = Instantiate(_cellPrefab,_container);
+                cell.InitLevelCell(level, active, _informationWindow);
+            }
             
-            var cell = Instantiate(_cellPrefab,_container);
-            cell.InitLevelCell(level.LevelID, active);
                 
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

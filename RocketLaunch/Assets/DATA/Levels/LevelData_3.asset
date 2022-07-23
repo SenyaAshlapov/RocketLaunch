@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: LevelData_3
   m_EditorClassIdentifier: 
   LevelID: 3
-  Budget: 0
-  Gravity: 0
-  AtmosphereResistance: 0
-  RequiredHeight: 0
+  LevelRang: 1
+  Budget: 130
+  Gravity: 12.3
+  AtmosphereResistance: 16.5
+  LevelCodeName: TROPIC-3
+  LevelDescription: god damn? this dont funny yet

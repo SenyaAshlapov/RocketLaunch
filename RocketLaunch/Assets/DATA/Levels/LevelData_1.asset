@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: LevelData_1
   m_EditorClassIdentifier: 
   LevelID: 1
+  LevelRang: 0
   Budget: 100
   Gravity: 9.4
   AtmosphereResistance: 15
-  RequiredHeight: 1
+  LevelCodeName: TROPIC-1
+  LevelDescription: first try to launch this shit to space

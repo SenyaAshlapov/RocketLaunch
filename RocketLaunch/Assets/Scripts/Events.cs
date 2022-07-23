@@ -34,6 +34,8 @@ public class Events : MonoBehaviour
     public static FloatDelegate UpdateGravity;
     public static FloatDelegate UpdateAtmResistance;
 
+    public static FloatDelegate UpdateBudgetOnMenuUI;
+
 
     public delegate void SimpleDelegate();
     public static SimpleDelegate SelectEngineStore;
@@ -47,4 +49,7 @@ public class Events : MonoBehaviour
     public static SimpleDelegate ShowLaunchUI;
     public static SimpleDelegate DestroyRocket;
     public static SimpleDelegate LevelComplete;
+
+    public static SimpleDelegate UpdateBaseRang;
+    public static SimpleDelegate ShowBaseStore;
 }

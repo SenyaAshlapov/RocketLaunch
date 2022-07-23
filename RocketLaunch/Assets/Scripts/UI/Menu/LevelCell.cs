@@ -7,17 +7,41 @@ public class LevelCell : MonoBehaviour
 {
     private delegate void cellDelegate(string lvl);
     private cellDelegate onClick = null;
-    [SerializeField]private Text _levelNumber;
+
+    [SerializeField]private Text _cellLevelNumber;
+    [SerializeField]private Text _cellBudget;
+    [SerializeField]private Text _cellCodeName;
+
+
+    [SerializeField]private MissionInformationWindow _missionInformationWindow; 
     private int _levelID;
-    [SerializeField]private bool _isActive;
+    private LevelData _thisLevel;
 
 
-    public void InitLevelCell(int levelID,bool isActive)
+    public void InitLevelCell(LevelData levelData, bool isActive, MissionInformationWindow infoWindow)
     {
-        _levelID = levelID;
-        _levelNumber.text = levelID.ToString();
-        if(isActive == true)
+        _levelID = levelData.LevelID;
+
+        _thisLevel = levelData;
+        _missionInformationWindow = infoWindow;
+
+        _cellLevelNumber.text = levelData.LevelID.ToString(); 
+        _cellCodeName.text = levelData.LevelCodeName;
+        _cellBudget.text = levelData.Budget.ToString();
+
+        if(isActive == true){
             onClick = SceneManager.LoadScene;
+        }           
+    }
+
+    public void showMissionInformationWindow(){
+        _missionInformationWindow.gameObject.SetActive(true);
+        _missionInformationWindow.ShowInformation(_thisLevel.LevelCodeName.ToString(), _thisLevel.LevelDescription.ToString(), _thisLevel.Budget);
+
+    }
+
+    public void hideMissionInformationWindow(){
+        _missionInformationWindow.gameObject.SetActive(false);
     }
 
     public void OnClick() => onClick(_levelID.ToString());
