@@ -18,6 +18,10 @@ public class LevelMenu : MonoBehaviour
     }
     void Start() =>  initLevelList();
 
+    private void OnDestroy() {
+        Events.UpdateBaseRang -= initLevelList;
+    }
+
     private void initLevelList()
     {
         int count = LevelSaverLoader.LoadLevels();
@@ -43,8 +47,12 @@ public class LevelMenu : MonoBehaviour
 
     private void OnMouseDown() {
         showLevelMenu();
+        Events.ShowMissionsStore?.Invoke();
     }
 
     private void showLevelMenu() => _levelMenuWindow.SetActive(true);
-    public void HideLevelMenu() => _levelMenuWindow.SetActive(false);
+    public void HideLevelMenu() {
+        _levelMenuWindow.SetActive(false);
+        Events.ShowBase?.Invoke();
+    } 
 }

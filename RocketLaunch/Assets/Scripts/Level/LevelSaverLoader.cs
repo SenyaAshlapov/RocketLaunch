@@ -4,6 +4,7 @@ using UnityEngine;
 public class LevelSaverLoader 
 {
     public static string SAVES_KEY = "LevelsCounted";
+    public static string SAVE_CURRENT_LEVEL_KEY = "CurrentLevel";
     public static string SAVE_BASE_RANG_KEY = "BaseRang";
     public static string SAVE_BUDGET_KEY = "Budget";
 
@@ -44,6 +45,7 @@ public class LevelSaverLoader
         PlayerPrefs.SetInt(SAVES_KEY,1);
         PlayerPrefs.SetInt(SAVE_BASE_RANG_KEY,0);
         PlayerPrefs.SetInt(SAVE_BUDGET_KEY,20);
+        PlayerPrefs.SetInt(SAVE_CURRENT_LEVEL_KEY,1);
     }
 
     public static void SaveBaseRang(int rang){      
@@ -77,7 +79,18 @@ public class LevelSaverLoader
         }
     }
 
+    public static void SaveCurrentLevel(int level){
+        PlayerPrefs.SetInt(SAVE_CURRENT_LEVEL_KEY, level);
+    }
 
+    public static int LoadCurrentLevel(){
+        if(PlayerPrefs.HasKey(SAVE_CURRENT_LEVEL_KEY)){
+            return PlayerPrefs.GetInt(SAVE_CURRENT_LEVEL_KEY);
+        }
+        else{
+            return 1;
+        }        
+    }
 
 
 }

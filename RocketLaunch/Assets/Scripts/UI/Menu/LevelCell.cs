@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelCell : MonoBehaviour
 {
-    private delegate void cellDelegate(string lvl);
+    private delegate void cellDelegate();
     private cellDelegate onClick = null;
 
     [SerializeField]private Text _cellLevelNumber;
@@ -30,7 +30,7 @@ public class LevelCell : MonoBehaviour
         _cellBudget.text = levelData.Budget.ToString();
 
         if(isActive == true){
-            onClick = SceneManager.LoadScene;
+            onClick = loadLevel;
         }           
     }
 
@@ -46,7 +46,12 @@ public class LevelCell : MonoBehaviour
         _missionInformationWindow.gameObject.SetActive(false);
     }
 
-    public void OnClick() => onClick(_levelID.ToString());
+    public void OnClick() => onClick();
+
+    private void loadLevel(){
+        LevelSaverLoader.SaveCurrentLevel(_levelID);
+        SceneManager.LoadScene("Level");
+    }
 
     
 }

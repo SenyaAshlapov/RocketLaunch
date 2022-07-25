@@ -34,21 +34,22 @@ public class StoreCamera : MonoBehaviour
 
     private void lookAtEngine()  => activateCamera(_engineCamera);  
 
-    private void lookAtRocket() {
+    private void lookAtRocket() 
+    {
         _activeCamera.SetActive(false);
 
         _mainCamera.SetActive(true);
     }
 
-    private void activateCamera(GameObject activeCamera){
+    private void activateCamera(GameObject activeCamera)
+    {
         if(_activeCamera != null){
             _activeCamera.SetActive(false);
         }
         
-       _activeCamera = activeCamera;
+        _activeCamera = activeCamera;
         activeCamera.SetActive(true);
-        _mainCamera.SetActive(false);
-                       
+        _mainCamera.SetActive(false);                       
     }
 
     

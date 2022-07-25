@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Base_1
   m_EditorClassIdentifier: 
   BaseRang: 1
-  BasePrefab: {fileID: 3388455809267367180, guid: c32458a6841d08e438f8dcd16db7ccf6, type: 3}
+  BasePrefab: {fileID: 6393967377301871507, guid: 3f11ae32a4b763e44a18a6eb3450be44, type: 3}
   BasePrice: 5
   BaseIcon: {fileID: 21300000, guid: 76d956c5b2d76e9409e19bca719aa911, type: 3}
   BaseUIColor:
     serializedVersion: 2
-    rgba: 4287299445
+    rgba: 3364552565
   BaseName: ultra
   BaseDescription: "\u0431\u0438\u043F-\u0431\u0438\u043F"

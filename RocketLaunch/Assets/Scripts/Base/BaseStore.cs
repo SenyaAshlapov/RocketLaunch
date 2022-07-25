@@ -30,25 +30,14 @@ public class BaseStore : MonoBehaviour
         initStore();
     }
 
-
-    private void initStore()
-    {
-        Debug.Log(LevelSaverLoader.LoadBaseRang());
-        if(LevelSaverLoader.LoadBaseRang() != (_basesList.Count-1))
-        {
-            _nextBase = _basesList[LevelSaverLoader.LoadBaseRang() + 1];
-            _nextBaseIcon.sprite = _nextBase.BaseIcon;
-            _nextBaseBackgroundImage.color = _nextBase.BaseUIColor;
-
-            _nextBasePrice.text = _nextBase.BasePrice.ToString();
-            _nextBaseName.text = _nextBase.BaseName;
-            _nextBaseDescription.text = _nextBase.BaseDescription;
+    private void OnMouseDown() {
+        if(LevelSaverLoader.LoadBaseRang() != (_basesList.Count-1)){
+            showBaseStore();
+            initStore();
+            Events.ShowBaseStore?.Invoke();
         }
-
-        
-
-
     }
+
 
     public void UpdateBase()
     {
@@ -63,14 +52,25 @@ public class BaseStore : MonoBehaviour
         }
     }
 
-    private void OnMouseDown() {
-        if(LevelSaverLoader.LoadBaseRang() != (_basesList.Count-1)){
-            showBaseStore();
-            initStore();
-        }
+    private void initStore()
+    {
+        Debug.Log(LevelSaverLoader.LoadBaseRang());
+        if(LevelSaverLoader.LoadBaseRang() != (_basesList.Count-1))
+        {
+            _nextBase = _basesList[LevelSaverLoader.LoadBaseRang() + 1];
+            _nextBaseIcon.sprite = _nextBase.BaseIcon;
+            _nextBaseBackgroundImage.color = _nextBase.BaseUIColor;
 
+            _nextBasePrice.text = _nextBase.BasePrice.ToString();
+            _nextBaseName.text = _nextBase.BaseName;
+            _nextBaseDescription.text = _nextBase.BaseDescription;
+        }
     }
+
     private void showBaseStore() => _basesStore.SetActive(true);
 
-    public void HideBaseStore() => _basesStore.SetActive(false);
+    public void HideBaseStore() {
+        _basesStore.SetActive(false);
+        Events.ShowBase?.Invoke();
+    }
 }

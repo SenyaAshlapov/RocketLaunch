@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField]private LevelData _levelData;
+    private LevelData _levelData;
+    [SerializeField]private List<LevelData> _levelDataList;
 
     public static int LevelID;
     public static float LevelBudget;
@@ -12,6 +13,7 @@ public class Level : MonoBehaviour
     public static float LevelAtmosphereResistance;
     
     void Awake(){
+        _levelData = loadLevel();
         Events.LevelComplete += completeLevel;
     }
 
@@ -37,6 +39,17 @@ public class Level : MonoBehaviour
     }
 
     private void completeLevel() => LevelSaverLoader.SaveLevel(LevelID);
+
+    private LevelData loadLevel(){
+        int currentLevel = LevelSaverLoader.LoadCurrentLevel();
+        foreach(LevelData level in _levelDataList){
+            if(level.LevelID == currentLevel){
+                return level;
+            }
+
+        }
+        return null;
+    }
        
     
 }

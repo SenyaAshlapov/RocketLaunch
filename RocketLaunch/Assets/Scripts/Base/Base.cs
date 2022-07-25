@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
-    private int _baseRang = 1;
+    private int _baseRang = 0;
 
     [SerializeField]private List<BaseData> _basesList = new List<BaseData>();
     [SerializeField]private Transform _basePosition;
@@ -32,7 +32,7 @@ public class Base : MonoBehaviour
 
         foreach(BaseData data in _basesList){
             if(data.BaseRang == _baseRang){
-                 Instantiate(data.BasePrefab, _basePosition);
+                Instantiate(data.BasePrefab, _basePosition);
             }
         }       
     }

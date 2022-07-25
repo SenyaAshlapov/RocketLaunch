@@ -52,4 +52,6 @@ public class Events : MonoBehaviour
 
     public static SimpleDelegate UpdateBaseRang;
     public static SimpleDelegate ShowBaseStore;
+    public static SimpleDelegate ShowMissionsStore;
+    public static SimpleDelegate ShowBase;
 }

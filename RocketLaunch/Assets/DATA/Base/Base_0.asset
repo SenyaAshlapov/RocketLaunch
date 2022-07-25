@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Base_0
   m_EditorClassIdentifier: 
   BaseRang: 0
-  BasePrefab: {fileID: 3167020892139919990, guid: 1730f36651c56544d8673d4e84113198, type: 3}
+  BasePrefab: {fileID: 1337219640649120291, guid: 230d1dd2a351e0643b5894fa43d3c11b, type: 3}
   BasePrice: 0
   BaseIcon: {fileID: 21300000, guid: e00c9e3a374a12041bccb36e9735108e, type: 3}
   BaseUIColor:
     serializedVersion: 2
-    rgba: 4294953589
+    rgba: 3372206709
   BaseName: default
   BaseDescription: "\u043A\u0447\u0430\u0443"
