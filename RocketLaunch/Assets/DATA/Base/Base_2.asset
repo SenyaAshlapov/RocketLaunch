@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2f8606e42816d4f8a4b67c6fd83ee8, type: 3}
+  m_Name: Base_2
+  m_EditorClassIdentifier: 
+  BaseRang: 2
+  BasePrefab: {fileID: 2723411946759984552, guid: 5e901625270c3484a818d08e7bd2c67f, type: 3}
+  BasePrefabForLevel: {fileID: 2492514903194331188, guid: 0b2bd269ad8fd2245bad7b8a8d570ecc, type: 3}
+  BasePrice: 500
+  BaseIcon: {fileID: 21300000, guid: 4fd189916c8286d46be46ac61925036a, type: 3}
+  BaseUIColor:
+    serializedVersion: 2
+    rgba: 3363176437
+  BaseName: bruh
+  BaseDescription: Cape Karckaveral

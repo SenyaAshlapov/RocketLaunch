@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2f8606e42816d4f8a4b67c6fd83ee8, type: 3}
+  m_Name: Base_3
+  m_EditorClassIdentifier: 
+  BaseRang: 3
+  BasePrefab: {fileID: 1077267484394916702, guid: 9f570d84a10009f419214390aa44a839, type: 3}
+  BasePrefabForLevel: {fileID: 3439125415193703240, guid: 879a5c6319b834b428f624908395ca6d, type: 3}
+  BasePrice: 1000
+  BaseIcon: {fileID: 21300000, guid: 812752f1eab0b3b49bf5443eea1aa88c, type: 3}
+  BaseUIColor:
+    serializedVersion: 2
+    rgba: 4294931888
+  BaseName: bruh
+  BaseDescription: Mail International Rocket Research Site

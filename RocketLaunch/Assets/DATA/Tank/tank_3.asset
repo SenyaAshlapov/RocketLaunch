@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8416b023561c98041b52232976f0f768, type: 3}
+  m_Name: tank_3
+  m_EditorClassIdentifier: 
+  Parametr: 1
+  Prefab: {fileID: 1624279956325641923, guid: dd6275bd803656045a5940c675cdcae2, type: 3}
+  Weight: 35
+  Price: 20
+  Icon: {fileID: 21300000, guid: 6da2b50b7214e3a43b9e1bb6dc8cfa66, type: 3}
+  Name: TN-3
+  BackGroundColor:
+    serializedVersion: 2
+    rgba: 4294953589
+  SpecificImpulse: 18

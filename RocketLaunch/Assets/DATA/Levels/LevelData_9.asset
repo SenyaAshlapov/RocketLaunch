@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489562d7d5a750043ab6f808d30e8a73, type: 3}
+  m_Name: LevelData_9
+  m_EditorClassIdentifier: 
+  LevelID: 9
+  LevelRang: 3
+  Budget: 460
+  Gravity: 44.6
+  AtmosphereResistance: 31.4
+  LevelCodeName: Eagle Eye-2
+  LevelDescription: The scientific message has finished developing a new satellite,
+    it needs to be launched VERY CAREFULLY into orbit. It consists of two parts
