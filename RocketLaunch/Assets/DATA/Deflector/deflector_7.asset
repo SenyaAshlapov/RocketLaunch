@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b876bb9d89e6679439b925c04d69dc34, type: 3}
+  m_Name: deflector_7
+  m_EditorClassIdentifier: 
+  Parametr: 0
+  Prefab: {fileID: 3166454224867754175, guid: 1f56e0f1b9d487d479b5215a362e2de9, type: 3}
+  Weight: 16
+  Price: 45
+  Icon: {fileID: 21300000, guid: 6b57aadcadca85d4f8f7168d3dc991b5, type: 3}
+  Name: DEF-9
+  BackGroundColor:
+    serializedVersion: 2
+    rgba: 4294931888
+  Resistance: 15

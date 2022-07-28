@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8a5c25a98e8d6429a67fb771583e7c, type: 3}
+  m_Name: engine_7
+  m_EditorClassIdentifier: 
+  Parametr: 3
+  Prefab: {fileID: 1817252696502133129, guid: fc55a54b6b9af6e42a44608f49f8b0ff, type: 3}
+  Weight: 21
+  Price: 80
+  Icon: {fileID: 21300000, guid: 85c4cd4dbeb97f741af7d408cec6e10a, type: 3}
+  Name: FAU-2
+  BackGroundColor:
+    serializedVersion: 2
+    rgba: 4294931888
+  Thrust: 64

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2f8606e42816d4f8a4b67c6fd83ee8, type: 3}
+  m_Name: Base_3
+  m_EditorClassIdentifier: 
+  BaseRang: 3
+  BasePrefab: {fileID: 4607331619142159735, guid: db15e578423547a48bd35f111d5aaf93, type: 3}
+  BasePrice: 0
+  BaseIcon: {fileID: 21300000, guid: d717a41b618c64b41b3ac3c9346c4016, type: 3}
+  BaseUIColor:
+    serializedVersion: 2
+    rgba: 4294931888
+  BaseName: bruh
+  BaseDescription: "\u041F\u043A\u043F\u041A\u0426\u041F"
